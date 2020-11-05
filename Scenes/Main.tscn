@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Game_OF_life.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Crusty_Rock.tres" type="DynamicFont" id=2]
+
+[node name="GameOfLife" type="Node2D"]
+script = ExtResource( 1 )
+width = 26
+height = 14
+
+[node name="StepTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 10, 60 )
+
+[node name="ResetButton" type="Button" parent="."]
+margin_left = 10.0
+margin_top = 30.0
+margin_right = 53.2432
+margin_bottom = 45.3895
+text = "RESET"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 165.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "Conway's Game of Life"
+__meta__ = {
+"_edit_use_anchors_": false
+}
